@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get a quick estimate for fall leaf pickup and garden services in New Jersey.">
+  <title>Instant Quote | Garden State Autumn Care</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="leaves" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Garden State Autumn Care"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="about.html">About Us</a>
+        <a class="nav-quote active" href="quote.html">Instant Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container page-hero">
+      <span class="eyebrow">Fast starting estimate</span>
+      <h1>Your fall yard quote.</h1>
+      <p>Select your service and property size. This estimate is a starting point; you can confirm the details before booking.</p>
+    </section>
+
+    <section class="container">
+      <div class="quote-layout">
+        <form class="form-card" id="quoteForm">
+          <div class="field-grid">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input id="firstName" type="text" required>
+            </div>
+            <div class="field">
+              <label for="lastName">Last name</label>
+              <input id="lastName" type="text" required>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" type="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" type="tel" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="service">Fall service</label>
+            <select id="service" required>
+              <option value="">Choose a service</option>
+              <option value="leafPickup">Leaf Pickup & Bagging</option>
+              <option value="fallCleanup">Full Fall Garden Cleanup</option>
+              <option value="mulch">Mulch Installation</option>
+              <option value="porchDisplay">Fall Porch Display</option>
+              <option value="winterPrep">Winter Garden Prep</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="yardSize">Property / yard size</label>
+            <select id="yardSize" required>
+              <option value="">Choose a size</option>
+              <option value="small">Small yard</option>
+              <option value="medium">Medium yard</option>
+              <option value="large">Large yard</option>
+              <option value="xlarge">Extra-large yard</option>
+            </select>
+          </div>
+
+          <div class="checkboxes">
+            <strong style="font-family:Arial,sans-serif;font-size:.82rem">Optional add-ons</strong>
+            <label><input type="checkbox" name="extras" value="25"> Extra bagging and removal — $25</label>
+            <label><input type="checkbox" name="extras" value="35"> Weed removal in garden beds — $35</label>
+            <label><input type="checkbox" name="extras" value="20"> Walkway and driveway blow-off — $20</label>
+            <label><input type="checkbox" name="extras" value="45"> Plant or supply pickup — $45</label>
+          </div>
+
+          <div class="field">
+            <label for="notes">Property details or preferred date</label>
+            <textarea id="notes" placeholder="Example: Lots of leaves near the back fence. Preferred service date: Saturday, October 18."></textarea>
+          </div>
+
+          <button class="button button-primary" type="submit">Request This Estimate</button>
+          <p class="form-note">This demo form shows a confirmation message only. Connect it to Formspree, Netlify Forms, or your own email service before publishing.</p>
+          <div id="quoteSuccess" class="success-message">Thanks! Your estimate request is ready to send. Connect this form to your preferred form service to receive customer submissions.</div>
+        </form>
+
+        <aside class="quote-summary">
+          <h2>Quote summary</h2>
+          <div class="quote-row"><span>Service</span><strong id="summaryService">Not selected</strong></div>
+          <div class="quote-row"><span>Yard size</span><strong id="summaryYard">Not selected</strong></div>
+          <div class="quote-row"><span>Add-ons</span><strong id="summaryExtras">$0</strong></div>
+          <div class="quote-total"><span>Starting estimate</span><span id="quoteTotal">$0</span></div>
+          <p style="margin:1.2rem 0 0;color:#dce5d8;font-size:.88rem;line-height:1.55">Final pricing may change for unusually heavy leaf coverage, steep lots, or special disposal needs.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© 2026 Garden State Autumn Care</span><span>New Jersey seasonal yard care</span></div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
